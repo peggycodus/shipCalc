@@ -14,3 +14,7 @@ background: #FFCCCC;
 #info {
 background: #CCFFCC;
 }
+
+:required {
+  border: red;
+}
