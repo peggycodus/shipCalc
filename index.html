@@ -1,0 +1,84 @@
+<DOCTYPE! HTML>
+  <html>
+  <head>
+    <title>Shipping Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shipping Calculator</h1>
+
+      <div class="row">
+        <div id="alert">
+          <p>alert</p>
+
+      </div><!--end alert-->
+        <div class="col-md-6">
+          <h2>Shipment Information</h2>
+          <form id="shipInfo">
+            <p>Please enter your shipment details:</p>
+            <div class="form-group">
+              <h3>Sender:</h3>
+              <label for="senderFirstName">First Name:</label>
+              <input type="text" class="form-control senderFirstName required">
+              <label for="senderLastName">Last Name:</label>
+              <input type="text" class="form-control senderLastName required">
+              <label for="address1">Address1:</label>
+              <input type="text" class="form-control address1 required">
+              <label for="address2">Address2:</label>
+              <input type="text" class="form-control address2">
+              <label for="city">City:</label>
+              <input type="text" class="form-control city required">
+              <label for="state">State:</label>
+              <input type="text" class="form-control state required">
+              <label for="zipcode">Zipcode:</label>
+              <input type="text" class="form-control zipcode required">
+              <label for="country">Country:</label>
+              <input type="text" class="form-control country required">
+              <p> If you'd like to charge to your account:
+              <label for="senderAccount">Sender Account Number:</label>
+              <input type="text" class="form-control senderAccount">
+              </p>
+            </div><!--end sender form group-->
+
+            <div class="form-group">
+              <h3>Recipient:</h3>
+              <label for="recipientFirstName">First Name:</label>
+              <input type="text" class="form-control recipientFirstName required">
+              <label for="recipientLastName">Last Name:</label>
+              <input type="text" class="form-control recipientLastName required">
+              <label for="address1">Address1:</label>
+              <input type="text" class="form-control address1 required">
+              <label for="address2">Address2:</label>
+              <input type="text" class="form-control address2">
+              <label for="city">City:</label>
+              <input type="text" class="form-control city required">
+              <label for="state">State:</label>
+              <input type="text" class="form-control state required">
+              <label for="zipcode">Zipcode:</label>
+              <input type="text" class="form-control zipcode required">
+              <label for="country">Country:</label>
+              <input type="text" class="form-control country required">
+            </div><!--end recipient form group-->
+
+          </form>
+        </div><!--end col 1-->
+        <div class="col-md-6">
+          <div id="quote">
+            <table>
+              <thead>
+              </thead>
+              <tr>
+              </tr>
+            </table>
+            <h2>Shipping Quote</h2>
+          </div><!--end quote-->
+          <div id="info">
+            <h2>Shipping Info</h2>
+          </div><!--end quote-->
+
+
+        </div><!--end col 2-->
+      </div><!--end row-->
+    </div><!--end container-->
+  </body>
+  </html>
