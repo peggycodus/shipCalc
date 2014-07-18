@@ -1,11 +1,13 @@
 <DOCTYPE! HTML>
   <html lang="en">
   <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/scripts.js"></script>
     <meta charset="utf-8">
 
     <title>Shipping Calculator</title>
@@ -13,20 +15,23 @@
   <body>
     <div class="container">
       <h1>Shipping Calculator</h1>
-
+      <hr>
       <div class="row">
-        <div id="alert">
-          <p>alert</p>
-
-      </div><!--end alert-->
-        <div class="col-md-6">
+      <hr>
+        <div class="span6">
           <h2>Shipment Information</h2>
           <form id="shipInfo">
             <p>Please enter your shipment details:</p>
+
+            <div class="alert">
+              <p>alert</p>
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div><!--end alert-->
+
             <div class="form-group">
               <h3>Sender:</h3>
               <label for="senderFirstName">First Name:</label>
-              <input type="text" class="form-control senderFirstName required">
+              <input type="text" class="form-control senderFirstName" required autofocus>
               <label for="senderLastName">Last Name:</label>
               <input type="text" class="form-control senderLastName required">
               <label for="address1">Address1:</label>
@@ -89,8 +94,6 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-
- <!--              <input type="text" class="form-control state required"> -->
               <label for="zipcode">Zipcode:</label>
               <input type="text" class="form-control zipcode required">
               <label for="country">Country:</label>
@@ -668,21 +671,93 @@
 
               <!-- <input type="text" class="form-control country required"> -->
             </div><!--end recipient form group-->
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
 
+
+          <form id="packageInfo">
+            <h3>Package Info</h3>
+            <p>Add you packages here:</p>
+            <label for="packageWeight">Weight:</label>
+            <input type="text" class="form-control weight" required autofocus>
+            <label for="packageHeight">Height:</label>
+            <input type="text" class="form-control height">
+            <label for="packagewidth">Width:</label>
+            <input type="text" class="form-control height">
+            <label for="packageLegth">Length:</label>
+            <input type="text" class="form-control length">
+            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Add Another</button>
           </form>
         </div><!--end col 1-->
-        <div class="col-md-6">
+
+        <div class="span6"><!-- begin col 2-->
+          <div id="info">
+            <h3>Shipping Information</h3>
+            <ul><li>Package Limits</li>
+                <li>Shipping Rates</li>
+            </ul>
+
+            <p> Some shipping information with accordian slider</p>
+          </div><!--end quote-->
+
+          <div id="toFrom">
+
+
+            <h2>Sender/Recipient</h2>
+            <div class="row">
+            <div class="span3"><!-- begin sub-col 1/2-->
+            <dl>
+              <dt>Sender</dt>
+                  <dd>sender.firstName</dd>
+                  <dd>sender.lastName</dd>
+              <dt>Address</dt>
+                  <dd>sender.address1</dd>
+                  <dd>sender.address2</dd>
+                  <dd>sender.city</dd>
+                  <dd>sender.state</dd>
+                  <dd>sender.zipcode</dd>
+                  <dd>sender.country</dd>
+               <dt>Account</dt>
+                  <dd>sender.account</dd>
+            </dl>
+          </div><!--end sub-col 1/2-->
+
+          <div class="span3"><!-- begin sub-col 2/2-->
+            <dl>
+              <dt>Recipient</dt>
+                  <dd>recipient.firstName</dd>
+                  <dd>recipient.lastName</dd>
+              <dt>Address</dt>
+                  <dd>recipient.address1</dd>
+                  <dd>recipient.address2</dd>
+                  <dd>recipient.city</dd>
+                  <dd>recipient.state</dd>
+                  <dd>recipient.zipcode</dd>
+                  <dd>recipient.country</dd>
+               <dt>Account</dt>
+                  <dd>recipient.account</dd>
+            </dl>
+            </div><!--end sub-col 1/2-->
+          </div><!--end toFrom-->
+
           <div id="quote">
-            <table>
-              <thead>
+            <h2>Shipping Quote</h2>
+            <table id="quoteTable">
+              <thead>Package #
+              </thead>
+              <thead>Weight
+              </thead>
+              <thead>From
+              </thead>
+              <thead>To
+              </thead>
+              <thead>Price
               </thead>
               <tr>
               </tr>
             </table>
-            <h2>Shipping Quote</h2>
-          </div><!--end quote-->
-          <div id="info">
-            <h2>Shipping Info</h2>
+
           </div><!--end quote-->
 
 
