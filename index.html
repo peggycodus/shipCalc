@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.1.js"></script>
@@ -12,13 +12,14 @@
 
     <title>Shipping Calculator</title>
   </head>
+
   <body>
     <div class="container">
       <h1>Shipping Calculator</h1>
       <hr>
       <div class="row">
-      <hr>
-        <div class="span6">
+
+        <div class="col-md-6" id="first-column">
           <h2>Shipment Information</h2>
           <form id="shipInfo">
             <p>Please enter your shipment details:</p>
@@ -673,25 +674,9 @@
             </div><!--end recipient form group-->
             <button type="submit" class="btn btn-primary">Add</button>
           </form>
-
-
-          <form id="packageInfo">
-            <h3>Package Info</h3>
-            <p>Add you packages here:</p>
-            <label for="packageWeight">Weight:</label>
-            <input type="text" class="form-control weight" required autofocus>
-            <label for="packageHeight">Height:</label>
-            <input type="text" class="form-control height">
-            <label for="packagewidth">Width:</label>
-            <input type="text" class="form-control height">
-            <label for="packageLegth">Length:</label>
-            <input type="text" class="form-control length">
-            <button type="submit" class="btn btn-primary">Add</button>
-            <button type="submit" class="btn btn-primary">Add Another</button>
-          </form>
         </div><!--end col 1-->
 
-        <div class="span6"><!-- begin col 2-->
+        <div class="col-md-6" id="second-column"><!-- begin col 2-->
           <div id="info">
             <h3>Shipping Information</h3>
             <ul><li>Package Limits</li>
@@ -699,14 +684,13 @@
             </ul>
 
             <p> Some shipping information with accordian slider</p>
-          </div><!--end quote-->
+          </div><!--end info-->
 
           <div id="toFrom">
 
-
             <h2>Sender/Recipient</h2>
-            <div class="row">
-            <div class="span3"><!-- begin sub-col 1/2-->
+            <div class="row marketing">
+            <div class="col-lg-3"><!-- begin sub-col 1/2-->
             <dl>
               <dt>Sender</dt>
                   <dd>sender.firstName</dd>
@@ -723,7 +707,7 @@
             </dl>
           </div><!--end sub-col 1/2-->
 
-          <div class="span3"><!-- begin sub-col 2/2-->
+          <div class="col-lg-3"><!-- begin sub-col 2/2-->
             <dl>
               <dt>Recipient</dt>
                   <dd>recipient.firstName</dd>
@@ -739,8 +723,19 @@
                   <dd>recipient.account</dd>
             </dl>
             </div><!--end sub-col 1/2-->
-          </div><!--end toFrom-->
+          </div><!--row-marketing class-->
+          </div> <!--ends id="toFrom"-->
 
+
+
+        </div><!--end col 2-->
+      </div><!--end row-->
+      <div class="row"><!--opens second big row -->
+        <div class="col-md-6" id="first-column">
+        </div> <!--ends first column-->
+        <div class="col-md-6" id="second-column">
+          <div class="package-list">
+          </div>
           <div id="quote">
             <h2>Shipping Quote</h2>
             <table id="quoteTable">
@@ -757,12 +752,9 @@
               <tr>
               </tr>
             </table>
-
           </div><!--end quote-->
-
-
-        </div><!--end col 2-->
-      </div><!--end row-->
+        </div><!--ends second column-->
+      </div><!--closes row2-->
     </div><!--end container-->
   </body>
   </html>
